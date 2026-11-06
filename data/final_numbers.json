@@ -1,0 +1,213 @@
+{
+ "_note": "Display values for the Alderbrook Strategy Lab. Every number matches the final 6-slide deck (docs/03_deck_content_final.md). Live simulator values come from engine/engine.py; at default inputs they must equal these.",
+ "units": "$M unless stated; percentages as fractions",
+ "recommendation": {
+  "one_liner": "Buy 60% of Brightwater at close and the remaining 40% at the end of FY27, priced on audited FY27 revenue. Open at $400M; walk away above $450M.",
+  "tagline": "Buy the engine. Stage the cheque. Pay for proof.",
+  "opening_bid": 400,
+  "walk_away": 450,
+  "price_beats_partnership_at_or_below": 406
+ },
+ "board_tests_at_ask": {
+  "growth": {
+   "value": 0.0519,
+   "display": "5.2%",
+   "target": ">= 5%",
+   "status": "PASS"
+  },
+  "leverage": {
+   "value": 2.37,
+   "display": "2.37x",
+   "target": "<= 2.5x",
+   "status": "PASS"
+  },
+  "margin": {
+   "value": 0.1187,
+   "display": "11.9%",
+   "target": ">= 11%",
+   "status": "PASS"
+  },
+  "mix": {
+   "value": 0.1172,
+   "display": "11.7% -> 12.0%",
+   "target": ">= 12%",
+   "status": "ON PLAN",
+   "note": "12.0% if Vital grows 7.2% a year on Brightwater's engine"
+  }
+ },
+ "organic_bridge": {
+  "fy25": 1800.0,
+  "juice": -78.5,
+  "iced_tea": 0.0,
+  "sparkling": 145.5,
+  "hydration_other": 100.5,
+  "fy29_organic": 1967.5,
+  "organic_cagr": 0.0225,
+  "fy29_at_5pct": 2187.9,
+  "fy29_at_6pct": 2272.5,
+  "gap_5pct": 220.4,
+  "gap_6pct": 305.0,
+  "note": "Vital held flat at $22M; rest of hydration/other grows 11%"
+ },
+ "scorecard_at_ask": [
+  {
+   "option": "Brightwater 60% / 40%",
+   "cagr": 0.0519,
+   "peak_leverage": 2.37,
+   "op_margin": 0.1187,
+   "mix": 0.1172,
+   "npv": 16.0,
+   "npv_note": "+62.8 at $400M",
+   "tests": 3,
+   "verdict": "RECOMMENDED",
+   "recommended": true
+  },
+  {
+   "option": "Brightwater 100% now",
+   "cagr": 0.0519,
+   "peak_leverage": 3.04,
+   "op_margin": 0.1187,
+   "mix": 0.1172,
+   "npv": -17.8,
+   "tests": 2,
+   "verdict": "Fails board leverage"
+  },
+  {
+   "option": "Marrow Lane 100%",
+   "cagr": 0.0329,
+   "peak_leverage": 1.85,
+   "op_margin": 0.1108,
+   "mix": 0.0107,
+   "npv": -60.7,
+   "tests": 2,
+   "verdict": "Limited category fit"
+  },
+  {
+   "option": "Distribution partnership",
+   "cagr": 0.0349,
+   "peak_leverage": 1.24,
+   "op_margin": 0.1094,
+   "mix": 0.0578,
+   "npv": 56.8,
+   "npv_note": "risk-adjusted for 50% chance of sale after FY27; incl. ~$53.6M terminal value at 8x",
+   "tests": 1,
+   "verdict": "Plan B only; no brand control"
+  },
+  {
+   "option": "Vital relaunch",
+   "cagr": 0.0274,
+   "peak_leverage": 1.2,
+   "op_margin": 0.1108,
+   "mix": 0.0299,
+   "npv": 11.4,
+   "tests": 2,
+   "verdict": "Slow, high execution risk"
+  }
+ ],
+ "option_rationales": {
+  "Brightwater 60% / 40%": "Only path that passes growth, leverage and margin together, buys a 90-day innovation engine and 5 AI specialists, and pays the second 40% only for proven FY27 revenue.",
+  "Brightwater 100% now": "Same assets, but all risk paid up front: leverage hits 3.04x, above the board's 2.5x.",
+  "Marrow Lane 100%": "Profitable cold brew (~$81M by FY29) but no functional brand, founders exit with no successor, and growth stays at 3.3%.",
+  "Distribution partnership": "Cheaper up front, but buys no brand and no capability, ends if Brightwater is sold to a rival, and passes only 1 of 4 tests.",
+  "Vital relaunch": "$50M to retry a brand at $22M revenue, 60% sold on promotion, with the same 14-month innovation cycle."
+ },
+ "deal": {
+  "cash_at_close": 312,
+  "tranche1_equity": 270,
+  "transaction_costs": 12,
+  "integration": 30,
+  "tranche2_formula": "40% x MIN($450M, 2.75 x audited FY27 revenue), paid at end of FY27",
+  "tranche2_base": 180.0,
+  "tranche2_bear": 154.1,
+  "bw_fy27_rev_base": 164.16,
+  "pro_forma_net_debt": 636,
+  "pro_forma_ebitda": 268.1,
+  "headroom_close": 34.25,
+  "headroom_close_at_400": 64.25
+ },
+ "leverage_stress": [
+  {
+   "label": "Today",
+   "value": 1.2
+  },
+  {
+   "label": "60% at close",
+   "value": 2.37
+  },
+  {
+   "label": "70% at close",
+   "value": 2.54
+  },
+  {
+   "label": "100% at close",
+   "value": 3.04
+  },
+  {
+   "label": "60% + $40M exit cost",
+   "value": 2.52
+  },
+  {
+   "label": "60% at $400M + $40M exit cost",
+   "value": 2.41
+  }
+ ],
+ "ebitda_bridge_fy29": {
+  "standalone": 21.3,
+  "manufacturing": 12.1,
+  "delivery_margin": 18.9,
+  "total": 52.3
+ },
+ "npv_by_scenario": {
+  "price_450": {
+   "bear": -139.2,
+   "base": 16.0,
+   "mgmt": 145.8,
+   "base_70pct_synergies": -75.3
+  },
+  "price_400": {
+   "bear": -109.2,
+   "base": 62.8,
+   "mgmt": 192.6,
+   "base_70pct_synergies": -28.5
+  }
+ },
+ "stress_at_ask": [
+  {
+   "change": "Only 50% of cost of goods eligible for savings",
+   "npv_after": -24.4,
+   "meaning": "Audit co-packer cost buckets, changeover and transfer costs."
+  },
+  {
+   "change": "9% annual seller carry on tranche 2",
+   "npv_after": -12.5,
+   "meaning": "Staging is not cheaper if the seller charges for waiting."
+  },
+  {
+   "change": "Exit multiple falls from 12x to 10x",
+   "npv_after": -58.1,
+   "meaning": "Exit assumptions dominate; value conservatively."
+  },
+  {
+   "change": "$40M distributor or co-packer exit charge",
+   "npv_after": -24.0,
+   "meaning": "Also lifts leverage to 2.52x at the ask (2.41x at $400M)."
+  }
+ ],
+ "breakevens": {
+  "synergy_realisation_at_450": 0.947,
+  "synergy_realisation_at_400": 0.793,
+  "price_equal_to_partnership_npv": 406.4
+ },
+ "growth_definition": {
+  "fy25_29_cagr": 0.0519,
+  "fy29_yoy": 0.0409
+ },
+ "mix_plan": {
+  "qualifying_revenue_needed": 7.0,
+  "vital_growth_needed": 0.0715,
+  "vital_fy29": 29.0,
+  "mix_with_plan": 0.12,
+  "cagr_with_plan": 0.0527
+ },
+ "prior_acquisitions": "2016 and 2019 ($40M and $65M): both brands now below acquisition-year revenue (case p.4)"
+}

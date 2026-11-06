@@ -1,0 +1,43 @@
+{
+ "meta": {
+  "synthetic": true,
+  "seed": 42,
+  "network_outlets": 110000,
+  "note": "SYNTHETIC DATA. Illustrates how weekly outlet-level sales could rank outlets and sequence a rollout. Not case data.",
+  "fit_weights": {
+   "current_functional_velocity": 0.45,
+   "natural_shopper_index": 0.35,
+   "store_size": 0.1,
+   "promotion_dependence": -0.1
+  }
+ },
+ "waves": [
+  {
+   "wave": 1,
+   "outlets": 22000,
+   "share_of_network": 0.2,
+   "avg_fit": 66.5,
+   "expected_bw_velocity": 1.07,
+   "months": "6-9",
+   "gate": "Launch; scale if velocity >= 1.0x for two quarters"
+  },
+  {
+   "wave": 2,
+   "outlets": 33000,
+   "share_of_network": 0.3,
+   "avg_fit": 52.6,
+   "expected_bw_velocity": 0.88,
+   "months": "9-12",
+   "gate": "Release only if wave 1 holds >= 1.0x"
+  },
+  {
+   "wave": 3,
+   "outlets": 55000,
+   "share_of_network": 0.5,
+   "avg_fit": 36.4,
+   "expected_bw_velocity": 0.65,
+   "months": "12-18",
+   "gate": "Release selectively; stop any cluster < 0.7x for two quarters"
+  }
+ ]
+}
